@@ -42,10 +42,10 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Nav bar
-let a_tag = document.querySelectorAll('a');
+let a_tag = document.querySelectorAll('nav a');
+let i = 1;
 a_tag.forEach(function(element){
-  for(let i = 1; i <= 6; i++)
-    element.textContent = siteContent.nav[`nav-item-${i}`];
+    element.textContent = siteContent.nav[`nav-item-${i++}`];
 })
 
 //title
@@ -101,8 +101,24 @@ content[1].textContent = siteContent["contact"]["address"];
 content[2].textContent = siteContent["contact"]["phone"];
 content[3].textContent = siteContent["contact"]["email"];
 
+//footer
 content = document.querySelector("footer p");
 content.textContent = siteContent["footer"]["copyright"];
+
+//add new content
+content = document.querySelectorAll("nav a");
+content.forEach( (element) => element.style.color = 'green' );
+
+content = document.querySelector("nav");
+let new_content = document.createElement('a');
+new_content.textContent = "Hello";
+new_content.style.color = 'green';
+content.prepend(new_content);
+
+let more_content = document.createElement('a');
+more_content.textContent = "Goodbye";
+more_content.style.color = 'green';
+content.appendChild(more_content);
 
 
 
