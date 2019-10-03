@@ -58,7 +58,51 @@ button_tag.textContent = siteContent.cta.button;
 let img_tag = document.querySelector('.cta img');
 img_tag.setAttribute('src', siteContent["cta"]["img-src"]);
 
+//main content
+//top
+let content = document.querySelector(".main-content .top-content .text-content h4");
+content.textContent = siteContent["main-content"]["features-h4"];
 
+content = document.querySelector(".main-content .top-content .text-content p");
+content.textContent = siteContent["main-content"]["features-content"];
+
+content = document.querySelector(".main-content .top-content .text-content:last-child h4");
+content.textContent = siteContent["main-content"]["about-h4"];
+
+content = document.querySelector(".main-content .top-content .text-content:last-child p");
+content.textContent = siteContent["main-content"]["about-content"];
+//middle img
+content= document.querySelector(".middle-img");
+content.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+//bottom
+content = document.querySelector(".main-content .bottom-content .text-content h4");
+content.textContent = siteContent["main-content"]["services-h4"];
+
+content = document.querySelector(".main-content .bottom-content .text-content p");
+content.textContent = siteContent["main-content"]["services-content"];
+
+content = document.querySelector(".main-content .bottom-content .text-content:nth-child(2) h4");
+content.textContent = siteContent["main-content"]["product-h4"];
+
+content = document.querySelector(".main-content .bottom-content .text-content:nth-child(2) p");
+content.textContent = siteContent["main-content"]["product-content"];
+
+content = document.querySelector(".main-content .bottom-content .text-content:last-child h4");
+content.textContent = siteContent["main-content"]["vision-h4"];
+
+content = document.querySelector(".main-content .bottom-content .text-content:last-child p");
+content.textContent = siteContent["main-content"]["vision-content"];
+
+//contact
+content = document.querySelector(".contact").children;
+
+content[0].textContent = siteContent["contact"]["contact-h4"];
+content[1].textContent = siteContent["contact"]["address"];
+content[2].textContent = siteContent["contact"]["phone"];
+content[3].textContent = siteContent["contact"]["email"];
+
+content = document.querySelector("footer p");
+content.textContent = siteContent["footer"]["copyright"];
 
 
 
